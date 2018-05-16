@@ -6,7 +6,7 @@
 *.psd
 *.sublime*
 build/
-logo-pink-blue-desktop.svg
+style.css
 node_modules/
 npm-debug.*
 Thumbs.db

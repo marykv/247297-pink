@@ -110,7 +110,7 @@ module.exports = function(grunt) {
           src: [
             "*.html",
             "fonts/**/*.{woff,woff2}",
-            "css/**",
+            "css/**.min.css",
             "img/**",
             "js/*.min.js"
           ],
@@ -124,6 +124,7 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.registerTask("dev", ["less", "postcss", "cssmin", "imagemin", "uglify"]);
   grunt.registerTask("serve", ["browserSync", "watch"]);
-  grunt.registerTask("build", ["clean", "copy", "less", "postcss", "cssmin", "imagemin", "uglify"]);
+  grunt.registerTask("build", ["clean", "less", "postcss", "cssmin", "imagemin", "uglify", "copy"]);
 };

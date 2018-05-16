@@ -8,7 +8,8 @@
     "stylelint": "stylelint 'less/**/*.less' --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "grunt build",
-    "start": "npm run build && grunt serve"
+    "start": "npm run build && grunt serve",
+    "dev": "grunt dev"
   },
   "keywords": [],
   "author": "",
