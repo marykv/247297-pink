@@ -1,0 +1,63 @@
+.visually-hidden () {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/*Текст*/
+.text-tittle () {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: lighter;
+
+  @media @tablet-min {
+    font-size: 40px;
+  }
+
+  @media @desktop-min {
+    font-size: 50px;
+  }
+}
+
+.text-strong () {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  color: @black-color;
+}
+
+.text-standart () {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.text-standart-lighter () {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  line-height: 24px;
+
+  @media @tablet-min {
+    font-size: 18px;
+  }
+}
+
+.text-form () {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: @blue-color;
+}
+
+.popap-tittle {
+  .text-strong;
+
+  @media @tablet-min {
+    font-size: 30px;
+  }
+}

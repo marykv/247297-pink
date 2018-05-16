@@ -1,0 +1,160 @@
+.review {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.review__button {
+  display: none;
+}
+
+.review__block {
+  display: none;
+}
+
+.review__block--active {
+  display: flex;
+  flex-direction: column;
+}
+
+.review__author {
+  .text-strong;
+  text-align: center;
+  margin-top: 40px;
+
+  span {
+    display: none;
+  }
+}
+
+.review__comment {
+  .text-standart;
+  text-align: center;
+  line-height: 30px;
+  height: 178px;
+  color: @blue-color;
+  margin-top: 13px;
+}
+
+.review__radio-block {
+  width: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto 0;
+}
+
+@media @tablet-min {
+
+  .review {
+    width: 620px;
+  }
+
+  .review__block {
+    margin-top: 83px;
+  }
+
+  .review__comment {
+    font-size: 19px;
+    font-weight: normal;
+    margin-bottom: 0;
+    height: 89px;
+  }
+
+  .review__author {
+    margin-top: 35px;
+    order: 2;
+    font-size: 20px;
+    font-weight: bold;
+
+    span {
+      display: block;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 35px;
+    }
+  }
+}
+
+@media @desktop-min {
+
+  .review {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 48px;
+  }
+
+  .review::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 82px;
+    height: 66px;
+    background-image: url("../img/icon-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .review__button {
+    display: block;
+    width: 24px;
+    height: 47px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0.3;
+
+    &--next {
+      order: 2;
+      background-image: url("../img/icon-review-arrow-right.svg");
+    }
+
+    &--prev {
+      background-image: url("../img/icon-review-arrow-left.svg");
+    }
+  }
+
+  .review__button:hover {
+    opacity: 0.6;
+  }
+
+  .review__button:active {
+    opacity: 0.1;
+  }
+
+  .review__block {
+    width: 680px;
+    margin-top: 135px;
+    margin-left: 107px;
+    padding: 0;
+  }
+
+  .review__author {
+    width: 230px;
+    margin: 35px auto 35px;
+    font-size: 24px;
+
+    span {
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 37px;
+    }
+  }
+
+  .review__comment {
+    margin-top: 2px;
+    font-size: 19px;
+
+    span {
+      display: none;
+    }
+  }
+}

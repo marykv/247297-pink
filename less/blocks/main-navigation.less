@@ -1,0 +1,144 @@
+.main-navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-navigation__toggle-btn {
+  font-size: 0;
+  width: 25px;
+  height: 24px;
+
+  &--close {
+    background-image: url("../img/icon-menu-burger.svg");
+  }
+
+  &--open {
+    background-image: url("../img/icon-menu-cross.svg");
+  }
+
+  &--close:hover {
+    background-image: url("../img/icon-menu-burger-hover.svg");
+  }
+
+  &--open:hover {
+    background-image: url("../img/icon-menu-cross-hover.svg");
+  }
+
+  &--close:active {
+    background-image: url("../img/icon-menu-burger-hover.svg");
+    opacity: 0.3;
+  }
+
+  &--open:active {
+    background-image: url("../img/icon-menu-cross-hover.svg");
+    opacity: 0.3;
+  }
+}
+
+.main-navigation__toggle-btn--no-js {
+  display: none;
+}
+
+.main-navigation__menu {
+  display: none;
+  position: absolute;
+  z-index: 50;
+  left: 0;
+  top: 69px;
+  width: 100%;
+  background-color: @blue-color;
+
+  &--no-js {
+    display: block;
+  }
+}
+
+.main-navigation__list {
+  height: 64px;
+  box-shadow: inset 0 1px 0 0 @grey-color;
+  border-top: 1px solid @black-color;
+  text-align: center;
+  background-color: @blue-color;
+}
+
+.main-navigation__list:last-child {
+  border-bottom: 1px solid @black-color;
+}
+
+.main-navigation a {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: @white-color;
+  line-height: 63px;
+}
+
+.main-navigation a:hover {
+  color: @pink-color;
+}
+
+.main-navigation a:active {
+  color: @pink-color;
+  opacity: 0.3;
+}
+
+@media @tablet-min {
+
+  .main-navigation__menu {
+    height: 110px;
+    width: 100%;
+    background-color: @blue-color;
+    top: 110px;
+  }
+}
+
+@media @desktop-min {
+
+  .main-navigation__toggle-btn {
+    display: none;
+  }
+
+  .main-navigation__menu {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: transparent;
+
+    a {
+      font-family: "Open Sans";
+      font-size: 19px;
+      font-weight: normal;
+      text-transform: none;
+      padding-bottom: 10px;
+    }
+  }
+
+  .main-navigation__list {
+    margin-right: 78px;
+    background-color: transparent;
+  }
+
+  .main-navigation__list {
+    box-shadow: none;
+    border-top: none;
+  }
+
+  .main-navigation__list:last-child {
+    border-bottom: none;
+  }
+
+  .main-navigation__list:last-of-type {
+    margin-right: 4px;
+  }
+
+  .main-navigation__list--active a {
+    border-bottom: 2px solid @white-color;
+
+    &:hover {
+      border-bottom: 2px solid @pink-color;
+    }
+  }
+}

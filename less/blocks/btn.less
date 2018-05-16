@@ -1,0 +1,158 @@
+.btn {
+  display: block;
+  background: transparent;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.application-btn {
+  border-radius: 30px;
+  text-align: center;
+  line-height: 45px;
+
+  &--download {
+    width: 281px;
+    height: 55px;
+    border: 3px solid @white-color;
+    color: @white-color;
+    margin: auto;
+  }
+
+  &--post {
+    width: 280px;
+    height: 55px;
+    border: 3px solid @pink-color;
+    color: @pink-color;
+  }
+
+  &--reset {
+    width: 281px;
+    height: 55px;
+    border: 3px solid rgba(40, 54, 69, 0.1);
+    color: rgba(40, 54, 69, 0.1);
+    margin-top: 12px;
+  }
+}
+
+.form-btn {
+  width: 278px;
+  height: 62px;
+  text-transform: uppercase;
+  background-color: @green-color;
+  color: @white-color;
+  border-radius: 2px;
+}
+
+/*Эффекты*/
+.application-btn--download {
+
+  &:hover {
+    background-color: @white-color;
+    color: @pink-color;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
+}
+
+.application-btn--post {
+
+  &:hover {
+    background-color: @pink-color;
+    color: @white-color;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.application-btn--reset {
+
+  &:hover {
+    border-color: rgba(40, 54, 69, 0.3);
+    color: rgba(40, 54, 69, 0.3);
+  }
+
+  &:active {
+    background-color: @element-grey-color;
+    border-color: @element-grey-color;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.form-btn {
+
+  &:hover {
+    background-color: @green-color-hover;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: @element-lightgrey-color;
+    color: @white-color;
+  }
+}
+
+@media @tablet-min {
+
+  .application-btn {
+
+    &--download {
+      width: 300px;
+    }
+
+    &--post {
+      width: 260px;
+      margin-top: 0;
+    }
+
+    &--reset {
+      width: 260px;
+    }
+  }
+
+  .form-btn {
+    width: 300px;
+    height: 62px;
+    text-transform: uppercase;
+    background-color: @green-color;
+    color: @white-color;
+    border-radius: 2px;
+    margin: 0;
+  }
+}
+
+@media @desktop-min {
+
+  .application-btn {
+
+    &--download {
+      margin: 19px auto;
+      font-size: 21px;
+    }
+
+    &--post {
+      width: 183px;
+      margin: 0;
+    }
+
+    &--reset {
+      width: 183px;
+      margin: 0;
+    }
+  }
+
+  .form-btn {
+    width: 298px;
+  }
+}

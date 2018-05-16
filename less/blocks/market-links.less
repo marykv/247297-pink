@@ -1,0 +1,39 @@
+.market-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 23px;
+}
+
+.market-links__item {
+  font-size: 0;
+  width: 50px;
+  height: 56px;
+}
+
+.market-links__item {
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  &--apple {
+    background-image: url("../img/logo-apple.svg");
+  }
+
+  &--android {
+    background-image: url("../img/logo-android.svg");
+    margin: 0 29px 0 30px;
+  }
+
+  &--window {
+    background-image: url("../img/logo-microsoft.svg");
+  }
+}
+
+@media @tablet-min {
+
+  .market-links {
+    margin: 45px auto 38px;
+  }
+}

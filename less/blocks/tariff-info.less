@@ -1,0 +1,231 @@
+.tariff-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  min-width: 830px;
+  margin: 130px auto 20px;
+  text-align: left;
+}
+
+.tariff-info__customs-block {
+  display: none;
+}
+
+.tariff-info__item {
+  display: flex;
+  flex-direction: column;
+  width: 294px;
+  text-transform: uppercase;
+}
+
+.tariff-info__item:nth-of-type(2n) {
+  border-left: 2px solid @element-lightgrey-color;
+  border-right: 2px solid @element-lightgrey-color;
+}
+
+.tariff-info__tittle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: @blue-color;
+  .text-strong;
+  color: @white-color;
+
+  span {
+    .text-tittle;
+  }
+}
+
+.tariff-info__customs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60px;
+  background-color: @white-color;
+  border-bottom: 2px solid @element-lightgrey-color;
+  .text-standart;
+}
+
+.tariff-info__customs-name {
+  flex-basis: 244px;
+  margin-left: 22px;
+}
+
+.tariff-info__checked {
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 18px;
+
+  &--yes {
+    width: 40px;
+    height: 27px;
+    background-image: url("../img/icon-yes.svg");
+    margin-right: 16px;
+  }
+
+  &--no {
+    width: 30px;
+    height: 28px;
+    background-image: url("../img/icon-no.svg");
+  }
+}
+
+.tariff-info__item--standart {
+  position: relative;
+}
+
+.tariff-info__item--standart::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 308px;
+  height: 304px;
+  background-image: url("../img/bg-hit.svg");
+  background-repeat: no-repeat;
+}
+
+.tariff-info__item--standart::after {
+  content: "Хит";
+  position: absolute;
+  display: block;
+  top: 17px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: @white-color;
+  text-transform: uppercase;
+  transform: rotate(-45deg);
+}
+
+@media @tablet-min {
+
+  .tariff-info {
+    justify-content: flex-start;
+    min-width: 620px;
+    max-width: 620px;
+    margin: 105px auto 70px;
+    transform: translateX(0);
+  }
+
+  .tariff-info__item:nth-of-type(2n) {
+    border-right: 2px solid @element-lightgrey-color;
+    border-left: 2px solid @element-lightgrey-color;
+  }
+
+  @media (-ms-high-contrast: none) {
+
+    .tariff-info__item--standart {
+      border-right: 2px solid @element-lightgrey-color;
+      border-left: 2px solid @element-lightgrey-color;
+    }
+  }
+
+  .tariff-info__customs-block {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid @element-lightgrey-color;
+    border-top: 2px solid @element-lightgrey-color;
+
+    span {
+      line-height: 48px;
+      height: 46px;
+      width: 153px;
+      padding-left: 16px;
+      border-bottom: 2px solid @element-lightgrey-color;
+      background-color: @white-color;
+      font-size: 14px;
+      color: @blue-color;
+    }
+  }
+
+  .tariff-info__customs-name {
+    display: none;
+  }
+
+  .tariff-info__tittle {
+    width: 153px;
+    height: 79px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 5px;
+
+    span {
+      font-size: 18px;
+      font-weight: lighter;
+      margin-top: -3px;
+    }
+  }
+
+  .tariff-info__tittle:first-of-type {
+    border-left: 2px solid @blue-color;
+  }
+
+  .tariff-info__customs {
+    width: 153px;
+    height: 46px;
+    justify-content: center;
+  }
+
+  .tariff-info__checked {
+    margin-right: 0;
+  }
+}
+
+@media @tablet-only {
+
+  .tariff-info__item--standart::before {
+    width: 254px;
+    height: 254px;
+    background-image: url("../img/bg-hit-tablet.svg");
+  }
+
+  .tariff-info__item--standart::after {
+    top: 14px;
+    left: 4px;
+  }
+}
+
+@media @desktop-min {
+
+  .tariff-info {
+    justify-content: flex-start;
+    min-width: 945px;
+    max-width: 945px;
+    margin: 150px auto 95px;
+  }
+
+  .tariff-info__customs-block {
+
+    span {
+      font-size: 18px;
+      line-height: 55px;
+      height: 60px;
+      width: 235px;
+      padding-left: 24px;
+    }
+  }
+
+  .tariff-info__tittle {
+    width: 233px;
+    height: 100px;
+    font-size: 18px;
+    padding-top: 17px;
+    align-items: top;
+    justify-content: flex-start;
+
+    span {
+      font-size: 24px;
+    }
+  }
+
+  .tariff-info__customs {
+    width: 233px;
+    height: 60px;
+  }
+
+  .tariff-info__checked {
+    margin-right: 0;
+  }
+}

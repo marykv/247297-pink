@@ -1,0 +1,55 @@
+{
+  "name": "pink",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint 'less/**/*.less' --syntax less",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "grunt build",
+    "start": "npm run build && grunt serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "*",
+    "autoprefixer": "*",
+    "grunt": "*",
+    "grunt-browser-sync": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-cwebp": "*",
+    "grunt-postcss": "*",
+    "grunt-svgstore": "*",
+    "load-grunt-tasks": "*",
+    "posthtml-include": "*",
+    "stylelint": "*",
+    "stylelint-config-htmlacademy": "*"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "less/**/*.less"
+  ],
+  "engines": {
+    "node": "8.11"
+  },
+  "dependencies": {
+    "normalize.less": "^1.0.0"
+  }
+}

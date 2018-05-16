@@ -1,0 +1,390 @@
+.order-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.order-form__description {
+  .text-standart;
+  width: 280px;
+  text-align: center;
+  margin-top: 46px;
+  line-height: 30px;
+
+  span {
+    display: none;
+  }
+}
+
+.order-form__section {
+  width: 280px;
+
+  &--username {
+    padding-top: 36px;
+
+    .order-form__positioner {
+      margin-bottom: 45px;
+    }
+  }
+
+  &--checkbox,
+  &--app {
+    width: 100%;
+    background-color: @background-grey-color;
+  }
+
+  &--contacts {
+    padding-top: 33px;
+
+    .order-form__section-tittle {
+      display: none;
+    }
+
+    .order-form__positioner {
+      margin-bottom: 22px;
+    }
+  }
+
+  &--app {
+
+    .order-form__positioner {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.order-form__positioner {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.order-form__section-tittle {
+  .text-standart;
+  line-height: 19px;
+  width: 220px;
+  margin: 0 auto;
+  padding-top: 37px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @pink-color;
+}
+
+.order-form__textarea {
+  .text-form;
+  line-height: 30px;
+  width: 280px;
+  height: 200px;
+  margin: 15px auto 50px;
+  padding: 16px 20px;
+  border: 2px solid @element-lightgrey-color;
+}
+
+.order-form__textarea:hover {
+  border: 2px solid @blue-color;
+}
+
+.order-form__textarea:active,
+.order-form__textarea:focus {
+  border: 2px solid @pink-color;
+  outline: none;
+}
+
+.order-form__required-info {
+  .text-standart;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 40px;
+
+  span {
+    color: @pink-color;
+  }
+
+  span:last-of-type {
+    display: none;
+  }
+}
+
+@media @tablet-min {
+
+  .order-form {
+    justify-content: flex-start;
+    margin-bottom: 50px;
+  }
+
+  .order-form__section {
+    width: 620px;
+    background: @white-color;
+  }
+
+  .order-form__description {
+    width: 490px;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 92px;
+    line-height: 30px;
+    order: -6;
+
+    span {
+      display: block;
+    }
+  }
+
+  .order-form__instruction {
+    display: block;
+    width: 330px;
+    margin: 5px auto;
+    font-size: 18px;
+    font-weight: normal;
+    order: -5;
+  }
+
+  .order-form__positioner {
+    width: 620px;
+    margin: 36px auto;
+  }
+
+  .order-form__section {
+
+    &--username {
+      order: -4;
+    }
+
+    &--checkbox {
+      order: -1;
+    }
+
+    &--contacts {
+      order: -2;
+    }
+
+    &--app {
+      order: -3;
+    }
+
+    &--emotion {
+      order: 0;
+    }
+  }
+
+  .order-form__section--app {
+
+    .order-form__positioner {
+      margin-top: 13px;
+      margin-bottom: 0;
+      padding-bottom: 50px;
+      border: 2px solid @element-lightgrey-color;
+    }
+
+    .order-form__section-tittle {
+      width: 370px;
+      padding-top: 0;
+      margin: 0 110px;
+    }
+  }
+
+  .order-form__section--contacts {
+
+    .order-form__positioner {
+      width: 620px;
+      padding-top: 0;
+      margin-top: 25px;
+      margin-bottom: 20px;
+      padding-bottom: 2px;
+      border: 2px solid @element-lightgrey-color;
+    }
+
+    .order-form__section-tittle {
+      display: block;
+      width: 260px;
+      padding-top: 0;
+      margin: 0 165px;
+    }
+  }
+
+  .order-form__section--checkbox {
+
+    .order-form__section-tittle {
+      width: 436px;
+      padding-top: 0;
+      margin: 0 78px;
+    }
+
+    .order-form__positioner {
+      border: 2px solid @element-lightgrey-color;
+      padding-bottom: 50px;
+    }
+  }
+
+  .order-form__section--emotion {
+
+    .order-form__positioner {
+      margin-top: 20px;
+      border: 2px solid @element-lightgrey-color;
+    }
+
+    .order-form__section-tittle {
+      width: 260px;
+      padding-top: 2px;
+      margin: 0 155px;
+    }
+
+    .order-form__textarea {
+      width: 500px;
+      height: 193px;
+      margin: 32px auto 40px;
+      padding-top: 13px;
+    }
+  }
+
+  .order-form__button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 620px;
+    margin-top: 31px;
+  }
+
+  .order-form__required-info {
+    margin-top: 22px;
+
+    span {
+      color: @pink-color;
+    }
+  }
+}
+
+@media @desktop-min {
+
+  .order-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 936px;
+    margin: 0 auto 34px;
+  }
+
+  .order-form__description {
+    width: 760px;
+    margin: 91px auto 22px;
+
+    span {
+      display: inline;
+    }
+  }
+
+  .order-form__positioner {
+    width: 434px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .order-form__section--username {
+    width: 434px;
+    padding: 0;
+    margin-top: 65px;
+  }
+
+  .order-form .order-form__section--app {
+    width: 434px;
+    margin-top: -10px;
+
+    .order-form__positioner {
+      padding-top: 13px;
+      padding-left: 30px;
+      padding-bottom: 50px;
+    }
+
+    .order-form__section-tittle {
+      margin: 0 auto;
+    }
+  }
+
+  .order-form__section--checkbox {
+    width: 936px;
+    padding: 0;
+
+    .order-form__positioner {
+      width: 936px;
+      margin-top: 31px;
+      padding-right: 0;
+    }
+
+    .order-form__inner-positioner {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 915px;
+      margin: 37px auto -40px;
+      padding-left: 52px;
+      padding-right: 0;
+    }
+
+    .order-form__section-tittle {
+      margin: 0 235px 0;
+    }
+  }
+
+  /*Блок контактов*/
+  .order-form__section--contacts {
+    width: 936px;
+    margin-top: 13px;
+    padding: 0;
+
+    .order-form__positioner {
+      width: 936px;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    .order-form__section-tittle {
+      margin: 0 320px 0;
+    }
+
+    .order-form__inner-positioner {
+      width: 820px;
+      margin: 43px auto 0;
+    }
+  }
+
+  .order-form__section--emotion {
+    width: 936px;
+    margin: 55px auto 31px;
+
+    .order-form__positioner {
+      width: 936px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .order-form__textarea {
+      width: 816px;
+      height: 127px;
+      margin-bottom: 45px;
+    }
+
+    .order-form__section-tittle {
+      margin: 0 320px 0;
+    }
+  }
+
+  .order-form__button-container {
+    width: 938px;
+    margin-top: 33px;
+  }
+
+  .order-form__required-info {
+    margin-top: 22px;
+
+    span {
+      color: @pink-color;
+    }
+
+    span:last-of-type {
+      display: inline;
+      color: @black-color;
+    }
+  }
+}
