@@ -27,7 +27,6 @@
     "grunt-contrib-watch": "*",
     "grunt-cwebp": "*",
     "grunt-postcss": "*",
-    "grunt-svgstore": "*",
     "load-grunt-tasks": "*",
     "posthtml-include": "*",
     "stylelint": "*",

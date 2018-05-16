@@ -103,17 +103,6 @@ module.exports = function(grunt) {
       }
     },
 
-    svgstore: {
-      options: {
-        includeTitleElement: false
-      },
-      sprite: {
-        files: {
-          "img/sprite.svg": ["img/s-*.svg"]
-        }
-      }
-    },
-
     copy: {
       build: {
         files: [{
@@ -136,5 +125,5 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
-  grunt.registerTask("build", ["clean", "copy", "less", "postcss", "cssmin", "svgstore", "imagemin", "uglify"]);
+  grunt.registerTask("build", ["clean", "copy", "less", "postcss", "cssmin", "imagemin", "uglify"]);
 };
