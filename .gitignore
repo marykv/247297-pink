@@ -6,7 +6,6 @@
 *.psd
 *.sublime*
 build/
-css/style.css
 logo-pink-blue-desktop.svg
 node_modules/
 npm-debug.*
