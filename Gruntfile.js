@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          "build/css/style.css": "less/style.less"
+          "css/style.css": "less/style.less"
         }
       }
     },
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
             require("autoprefixer")()
           ]
         },
-        src: "build/css/*.css"
+        src: "css/*.css"
       }
     },
 
@@ -27,13 +27,13 @@ module.exports = function(grunt) {
       server: {
         bsFiles: {
           src: [
-            "build/*.html",
-            "build/css/*.css",
-            "build/js/script.js"
+            "*.html",
+            "css/*.css",
+            "js/script.js"
           ]
         },
         options: {
-          server: "build/",
+          server: "/",
           watchTask: true,
           notify: false,
           open: true,
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          "build/css/style.min.css" : ["build/css/style.css"]
+          "css/style.min.css" : ["css/style.css"]
         }
       }
     },
@@ -78,7 +78,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          src: ["build/img/**/*.{png,jpg,webp}"]
+          src: ["img/**/*.{png,jpg,webp}"]
         }]
       }
     },
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          src: ["build/img/**/*.{png,jpg}"]
+          src: ["img/**/*.{png,jpg}"]
         }]
       }
     },
